@@ -8,12 +8,12 @@ An application that allows users to use a one minute wisely by submitting their 
  ## Setup/Installation Requirements
 1)Install the Visual studio code.<br>2)Git clone the repository.<br>3)Make sure the live server extension is installed.<br>4)Click on Go live.
 ## User Story
-<li>Comment on the different pitches posted py other uses.</li><br>
-<li>See the pitches posted by other uses.</li><br>
-<li>Vote on s pitch they have viwed by giving it a upvote or a downvote.</li><br>
-<li>Register to be allowed to log in to the application.</li><br>
-<li>View pitches from the different categories.</li><br>
-<li>Submit a pitch to a specific category of their choice.
+<li>Comment on the different pitches posted py other uses.</li>
+<li>See the pitches posted by other uses.</li>
+<li>Vote on s pitch they have viwed by giving it a upvote or a downvote.</li>
+<li>Register to be allowed to log in to the application.</li>
+<li>View pitches from the different categories.</li>
+<li>Submit a pitch to a specific category of their choice.</li>
 
 ## Todo list
 1)Design.<br>2)Execute for  use.
