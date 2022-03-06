@@ -1,35 +1,39 @@
 import os
-
+from dotenv import load_dotenv
+load_dotenv()
 
 class Config:
-    '''
-    General confirguration parent class
-    '''
+  SQLALCHEMY_TRACK_MODIFICATIONS=True
+  SECRET_KEY = os.environ.get('SECRET_KEY')
 
-    pass 
+  #Simplemde cofigurations
+  SIMPLEMDE_JS_IIFE = True
+  SIMPLEMDE_USE_CDN = True
 
+  #Email configurations
+  MAIL_SERVER = 'smtp.googlemail.com'
+  MAIL_PORT = 587
+  MAIL_USE_TLS = True
+  MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
+  MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+  #PHOTOS UPLOAD CONFIGURATION
+  UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
 class ProdConfig(Config):
-    '''
-    Production configuration child class
-    Args:
-        Config: The parent configuration class with General confirguration settings
-    '''
-    pass
-
+  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
+  if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+    SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",1)
 
 class DevConfig(Config):
-    '''
-    Development configuration child class
-    Args:
-        Config: The parent configuration class with General confirguration settings
-    '''
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:1234@localhost/pitch'
+  DEBUG = True
 
-    DEBUG = True
-
+class TestConfig(Config):
+  SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:1234@localhost/pitch_test'
 
 config_options = {
-    'development': DevConfig,
-    'production': ProdConfig
+  'production':ProdConfig,
+  'development':DevConfig,
+  'test':TestConfig
 }
 
