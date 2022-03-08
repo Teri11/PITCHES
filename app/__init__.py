@@ -1,5 +1,5 @@
 
-  
+import os  
 from flask import Flask
 from config import config_options
 from flask_mail import Mail
