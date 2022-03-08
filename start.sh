@@ -1,5 +1,5 @@
 export SECRET_KEY='mynameisaugstine'
-# export SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:1234@localhost/pitch'
+export SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:1234@localhost/pitch'
 export MAIL_USERNAME="augustineteri157@gmail.com"
 export MAIL_PASSWORD='34850829amk'
 
