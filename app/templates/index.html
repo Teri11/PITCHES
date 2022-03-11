@@ -11,29 +11,46 @@
   <img  src="https://media.wired.com/photos/5f10fd2718aba67278c259c3/master/w_1280%2Cc_limit/how-to-pitch-stories-to-wired-magazine-01.jpg" alt="" srcset="">
   
 </div>
-<div class="row">
-  <h1 class="text-center">INTERVIEW</h1>
-  <ul>
+<div class="container">
+  <div class="col-md-4">
+    <div class="row">
+      <h1 class="text-center">INTERVIEW</h1>
+      <ul  class="text-center">
+    
+      {{macro.showPitch(interview)}}
+      </ul>
+    
+    </div>
+  </div>
+  
+</div>
 
-  {{macro.showPitch(interview)}}
-  </ul>
+<div class="container">
+  <div class="col-md-4">
+    <div class="row">
+      <h1 class="text-center">PRODUCT</h1>
+      <ul  class="text-center">
+      {{macro.showPitch(product)}}
+      </ul>
+    
+    </div>
+  </div>
+  
+</div>
+
+<div class="container">
+  <div class="col-md-4">
+    <div class="row">
+      <h1 class="text-center">PROMOTION</h1>
+      <ul  class="text-center">
+      {{macro.showPitch(promotion)}}
+      </ul>
+    
+    </div>
+  </div>
 
 </div>
 
-<div class="row">
-  <h1 class="text-center">PRODUCT</h1>
-  <ul>
-  {{macro.showPitch(product)}}
-  </ul>
-
-</div>
-<div class="row">
-  <h1 class="text-center">PROMOTION</h1>
-  <ul>
-  {{macro.showPitch(promotion)}}
-  </ul>
-
-</div>
 
 <div class="container">
   <div class="row">
