@@ -8,7 +8,7 @@
   <div class="container" style="padding-bottom: 20px;">
     <!-- <a href="" class="btn btn-success">Create pitch</a> -->
   </div>
-  <img  src="https://media.wired.com/photos/5f10fd2718aba67278c259c3/master/w_1280%2Cc_limit/how-to-pitch-stories-to-wired-magazine-01.jpg" alt="" srcset="">
+  <img  src="https://media.wired.com/photos/5f10fd2718aba67278c259c3/master/w_1280%2Cc_limit/how-to-pitch-stories-to-wired-magazine-01.jpg" alt="" srcset=""><br><br>
   
 
 
@@ -16,8 +16,8 @@
     <div class="row">
         <div class="col-md-4">
             <div class="well well-lg">
-                <h1 style="color:black">PROMOTION</h1>
-                <ul  class="text-center">
+                <h3 style="color:black">PROMOTION</h3>
+                <ul style="color: black;" class="text-center">
                   {{macro.showPitch(promotion)}}
                   </ul>
                 <a href="{{ url_for('main.new_pitch') }}" class="btn btn-success -center">Create More</a>
@@ -25,8 +25,8 @@
         </div>
         <div class="col-md-4">
             <div class="well well-lg">
-                <h1 style="color:black">PRODUCT</h1>
-                <ul  class="text-center">
+                <h3 style="color:black">PRODUCT</h3>
+                <ul style="color: black;" class="text-center">
                   {{macro.showPitch(product)}}
                   </ul>
                 <a href="{{ url_for('main.new_pitch') }}" class="btn btn-success -center">Create More</a>
@@ -34,7 +34,7 @@
         </div>
         <div class="col-md-4">
             <div class="well well-lg">
-                <h1 style="color:black">INTERVIEW</h1>
+                <h3 style="color:black">INTERVIEW</h3>
                 <ul style="color: black;"  class="text-center">
     
                   {{macro.showPitch(interview)}}
