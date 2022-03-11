@@ -16,7 +16,7 @@ def index():
 
     return render_template('index.html',pitches=pitches, interview=interview,product=product,promotion=promotion)
 
-@main.route('/create_new', methods = ['POST','GET'])
+@main.route('/new_pitch', methods = ['POST','GET'])
 @login_required
 def new_pitch():
     form = PitchForm()
@@ -43,7 +43,7 @@ def comment(pitch_id):
         user_id = current_user._get_current_object().id
         new_comment = Comment(comment = comment,user_id = user_id,pitch_id = pitch_id)
         new_comment.save_c()
-        return redirect(url_for('.comment', pitch_id = pitch_id))
+        return redirect(url_for('main.comment', pitch_id = pitch_id))
     return render_template('comment.html', form =form, pitch = pitch,all_comments=all_comments)
 
 

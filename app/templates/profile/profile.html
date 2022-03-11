@@ -48,10 +48,10 @@
         </div>
       </div>
     </div>
-    <div class="col-md-1"></div>
+    <div class="col-md-1">
     <div class="col-md-5" id="user">
       {% if current_user %}
-      <h3>You have {{user.pitches.count()}} Pitches</h3>
+      <h3>You have {{user.pitches.count()}} Pitch</h3>
       {% for i in posts%}
       <div class="card pitches">
         <h4>Title: {{i.title}}</h4>
