@@ -10,8 +10,48 @@
   </div>
   <img  src="https://media.wired.com/photos/5f10fd2718aba67278c259c3/master/w_1280%2Cc_limit/how-to-pitch-stories-to-wired-magazine-01.jpg" alt="" srcset="">
   
+
+
+  <div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 style="color:black">Interview Pitches</h3>
+                <p style="color:black">They are short-lines paragraph pitches that will help you ace your Interview  in an awesome way in just a minute.</p>
+                <a href="{{ url_for('main.new_pitch') }}" class="btn btn-success -center">View More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 style="color:black">Product Pitches</h3>
+                <p style="color:black">They are short-lines paragraph pitches that will help you ace your product presentation in an awesome way in just a minute.</p>
+                <a href="{{ url_for('main.new_pitch') }}" class="btn btn-success -center">View More</a>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="well well-lg">
+                <h3 style="color:black">INTERVIEW</h3>
+                <ul  class="text-center">
+    
+                  {{macro.showPitch(interview)}}
+                  </ul>
+                <a href="{{ url_for('main.new_pitch') }}" class="btn btn-success
+                 -center">Create More</a>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+
 </div>
-<div class="container">
+<div  class="container">
   <div class="row">
   <div class="col-md-4">
     <div class="well well-lg">
