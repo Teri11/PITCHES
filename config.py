@@ -1,6 +1,7 @@
 import os
-from dotenv import load_dotenv
-load_dotenv()
+# import re
+# from dotenv import load_dotenv
+# load_dotenv()
 
 class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS=True
@@ -20,9 +21,9 @@ class Config:
   UPLOADED_PHOTOS_DEST = 'app/static/photos'
 
 class ProdConfig(Config):
-  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL","")
-  if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
-    SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",1)
+  SQLALCHEMY_DATABASE_URI = os.environ.get("DATABASE_URL")
+  # if SQLALCHEMY_DATABASE_URI.startswith("postgres://"):
+  #   SQLALCHEMY_DATABASE_URI =SQLALCHEMY_DATABASE_URI.replace("postgres://","postgresql://",1)
 
 class DevConfig(Config):
   SQLALCHEMY_DATABASE_URI = 'postgresql+psycopg2://access:1234@localhost/pitch'
